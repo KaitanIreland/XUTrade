@@ -21,10 +21,15 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Test String " + it1.toString());
         it1.setItem(34, "kireland", "Kaitan", "Thepowersthatbe", "Great", 34.78);
         System.out.println("Test set item: " + it1);
-//        Item item1
-//        Item item2
-//        Item item3
-//        Item item4
-//        Item item5
+        Item item1 = new Item(3, "jbridges", "Sofa", "Jared", "Good", 56.89);
+        Item item2 = new Item(9, "bwilliams", "Economics Textbook", "Bernice", "Poor", 40.52);
+        Item item3 = new Item(13, "lsmith", "Makeup", "Linda", "Excellent", 30.94);
+        Item item4 = new Item(5, "jedwards", "T shirt", "Jay", "Poor", 5.43);
+        Item item5 = new Item(2, "mhans", "Bicycle", "Michael", "Poor", 20.67);
+        System.out.println(item1);
+        System.out.println(item2);
+        System.out.println(item3);
+        System.out.println(item4);
+        System.out.println(item5);
     }
 }
