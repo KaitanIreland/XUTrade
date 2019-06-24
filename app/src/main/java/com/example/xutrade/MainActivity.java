@@ -12,10 +12,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        arrayItems = new ArrayList<>();
-        arrayItems.add(new Item(12, "Haaris", "Hamid", "Poor", 12.54));
+//        arrayItems = new ArrayList<>();
+//        arrayItems.add(new Item(12, "hhussein","Haaris", "Hamid", "Poor", 12.54));
+        Item it = new Item();
+        Item it1 = new Item(12, "hhussein", "Haaris", "Hamid", "Poor", 12.54);
+        System.out.println("Default: " + it);
+        System.out.println("Parameterized " + it1);
+        System.out.println("Test String " + it1.toString());
 
-        String format = "@xula.edu";
 //        Item item1
 //        Item item2
 //        Item item3
