@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Default: " + it);
         System.out.println("Parameterized " + it1);
         System.out.println("Test String " + it1.toString());
-
+        it1.setItem(34, "kireland", "Kaitan", "Thepowersthatbe", "Great", 34.78);
+        System.out.println("Test set item: " + it1);
 //        Item item1
 //        Item item2
 //        Item item3
