@@ -31,5 +31,11 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(item3);
         System.out.println(item4);
         System.out.println(item5);
+        Items listItems = new Items();
+        listItems.add(item1);
+        listItems.add(item2);
+        listItems.add(item3);
+        listItems.add(item4);
+        listItems.add(item5);
     }
 }
