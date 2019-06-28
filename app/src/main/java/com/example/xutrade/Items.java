@@ -32,17 +32,9 @@ public class Items {
     }
 
     public void swapItems(int index1, int index2) {
-        Item iStore1 = items.get(index1);
-        Item iStore2 = items.get(index2);
-        Item temp = items.get(index1);
-        for (int i = 0; i < items.size(); i++) {
-            if (items.get(i) == iStore1) {
-                items.set(i, iStore2);
-                if (items.get(i) == iStore2) {
-                    items.set(i, temp);
-                }
-            }
-        }
+        Item temp = new Item(items.get(index1).getId(), items.get(index1).getUsername(), items.get(index1).getName(), items.get(index1).getOwner(), items.get(index1).getCondition(), items.get(index1).getPrice());
+        items.get(index1).setItem(items.get(index2).getId(), items.get(index2).getUsername(), items.get(index2).getName(), items.get(index2).getOwner(), items.get(index2).getCondition(), items.get(index2).getPrice());
+        items.get(index2).setItem(temp.getId(), temp.getUsername(), temp.getName(), temp.getOwner(), temp.getCondition(), temp.getPrice());
     }
 
     public void setPrice(int index, double newPrice) {

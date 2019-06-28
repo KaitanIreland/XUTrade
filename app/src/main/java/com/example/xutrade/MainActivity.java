@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("\nSwap Items test (index 0 and 1): " + listItems.toString());
         listItems.setPrice(2, 10.00);
         System.out.println("\nSet price test ($10.00 index 3): " + listItems.toString());
-        ArrayList<Item> itemsByOwnerList = new ArrayList<>();
+        ArrayList<Item> itemsByOwnerList;
         itemsByOwnerList = (listItems.itemsBy("Jared"));
         System.out.println("\nAll items by owner Jared: " + itemsByOwnerList);
 

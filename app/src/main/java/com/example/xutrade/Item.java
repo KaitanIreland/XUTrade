@@ -111,6 +111,7 @@ public class Item {
         } else {
             this.username = username + "@xula.edu";
         }
+        this.username = newUsername;
         this.name = newName;
         this.owner = newOwner;
         this.condition = newCondition;
