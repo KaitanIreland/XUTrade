@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Items {
     private ArrayList<Item> items;
+    private ArrayList<Integer> indexList;
 
     public Items() {
         items = new ArrayList<>();
@@ -21,6 +22,24 @@ public class Items {
         return items.get(index);
     }
 
+    public void removeItem(int index) {
+        items.remove(items.get(index));
+    }
+
+    public void swapItems(int index1, int index2) {
+        Item iStore1 = new Item();
+        Item iStore2 = new Item();
+        Item temp;
+        for (int i = 0; i < items.size(); i++) {
+            iStore1 = items.get(index1);
+            iStore2 = items.get(index2);
+        }
+        temp = iStore2;
+        for (int i = 0; i < items.size(); i++) {
+            items.set(index2, iStore1);
+            items.set(index1, temp);
+        }
+    }
     public void setPrice(int index, double newPrice) {
         Item i = new Item();
         for (int j = 0; j < items.size(); j++) {
@@ -30,4 +49,38 @@ public class Items {
         }
         i.setPrice(newPrice);
     }
+
+    //    public ArrayList<Integer> invalidItems(){
+//
+//    }
+    public double averagePrice() {
+        int count = 0;
+        double total = 0;
+        for (int i = 0; i < items.size(); i++) {
+            total = total + items.get(i).getPrice();
+            count = count + 1;
+        }
+        return total / count;
+    }
+
+    public int averagePrice(String ownerName) {
+        int numOfItems = 0;
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getOwner().equals(ownerName)) {
+                numOfItems = numOfItems + 1;
+            }
+        }
+        return numOfItems;
+    }
+
+    public ArrayList<Item> itemsBy(String ownerName) {
+        ArrayList<Item> listOfItems = new ArrayList<>();
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getOwner().equals(ownerName)) {
+                listOfItems.add(items.get(i));
+            }
+        }
+        return listOfItems;
+    }
+
 }

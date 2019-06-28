@@ -37,5 +37,6 @@ public class MainActivity extends AppCompatActivity {
         listItems.add(item3);
         listItems.add(item4);
         listItems.add(item5);
+
     }
 }
