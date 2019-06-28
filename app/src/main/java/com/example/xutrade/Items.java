@@ -16,4 +16,18 @@ public class Items {
     public void add(Item i) {
         items.add(i);
     }
+
+    public Item get(int index) {
+        return items.get(index);
+    }
+
+    public void setPrice(int index, double newPrice) {
+        Item i = new Item();
+        for (int j = 0; j < items.size(); j++) {
+            if (j == index) {
+                i = items.get(index);
+            }
+        }
+        i.setPrice(newPrice);
+    }
 }
