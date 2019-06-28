@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
     private ArrayList<Item> arrayItems;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Item item1 = new Item(3, "jbridges", "Sofa", "Jared", "Good", 56.89);
         Item item2 = new Item(9, "bwilliams", "Economics Textbook", "Bernice", "Poor", 40.52);
         Item item3 = new Item(13, "lsmith", "Makeup", "Linda", "Excellent", 30.94);
-        Item item4 = new Item(5, "jedwards", "T shirt", "Jay", "Poor", 5.43);
+        Item item4 = new Item(5, "jbridges", "T shirt", "Jared", "Poor", 5.43);
         Item item5 = new Item(2, "mhans", "Bicycle", "Michael", "Poor", 20.67);
         System.out.println(item1);
         System.out.println(item2);
@@ -37,13 +38,15 @@ public class MainActivity extends AppCompatActivity {
         listItems.add(item3);
         listItems.add(item4);
         listItems.add(item5);
-        System.out.println("Default list: " + listItems.toString());
-        listItems.swapItems(1, 2);
+        System.out.println("\nDefault list: " + listItems.toString());
+        listItems.swapItems(0, 1);
         //  todo Invalid items test
-        System.out.println("Swap Items test (index 1 and 2): " + listItems.toString());
-        listItems.setPrice(2, 1.00);
-        System.out.println("Set price test ($1.00): " + listItems.toString());
-
+        System.out.println("\nSwap Items test (index 0 and 1): " + listItems.toString());
+        listItems.setPrice(2, 10.00);
+        System.out.println("\nSet price test ($10.00 index 3): " + listItems.toString());
+        ArrayList<Item> itemsByOwnerList = new ArrayList<>();
+        itemsByOwnerList = (listItems.itemsBy("Jared"));
+        System.out.println("\nAll items by owner Jared: " + itemsByOwnerList);
 
     }
 }

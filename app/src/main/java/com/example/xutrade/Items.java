@@ -32,24 +32,24 @@ public class Items {
     }
 
     public void swapItems(int index1, int index2) {
-        Item iStore1 = new Item();
-        Item iStore2 = new Item();
-        Item temp;
+        Item iStore1 = items.get(index1);
+        Item iStore2 = items.get(index2);
+        Item temp = items.get(index1);
         for (int i = 0; i < items.size(); i++) {
-            iStore1 = items.get(index1);
-            iStore2 = items.get(index2);
-        }
-        temp = iStore2;
-        for (int i = 0; i < items.size(); i++) {
-            items.set(index2, iStore1);
-            items.set(index1, temp);
+            if (items.get(i) == iStore1) {
+                items.set(i, iStore2);
+                if (items.get(i) == iStore2) {
+                    items.set(i, temp);
+                }
+            }
         }
     }
+
     public void setPrice(int index, double newPrice) {
         items.get(index).setPrice(newPrice);
     }
 
-    //    public ArrayList<Integer> invalidItems(){
+    //    TODO public ArrayList<Integer> invalidItems(){
 //
 //    }
     public double averagePrice() {
