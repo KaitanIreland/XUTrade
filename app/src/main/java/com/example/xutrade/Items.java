@@ -14,6 +14,11 @@ public class Items {
         return items.size();
     }
 
+    @Override
+    public String toString() {
+        return items.toString();
+    }
+
     public void add(Item i) {
         items.add(i);
     }
@@ -41,13 +46,7 @@ public class Items {
         }
     }
     public void setPrice(int index, double newPrice) {
-        Item i = new Item();
-        for (int j = 0; j < items.size(); j++) {
-            if (j == index) {
-                i = items.get(index);
-            }
-        }
-        i.setPrice(newPrice);
+        items.get(index).setPrice(newPrice);
     }
 
     //    public ArrayList<Integer> invalidItems(){

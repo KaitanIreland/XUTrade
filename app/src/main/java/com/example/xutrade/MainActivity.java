@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         listItems.add(item3);
         listItems.add(item4);
         listItems.add(item5);
+        System.out.println("Default list: " + listItems.toString());
+        listItems.swapItems(1, 2);
+        //  todo Invalid items test
+        System.out.println("Swap Items test (index 1 and 2): " + listItems.toString());
+        listItems.setPrice(2, 1.00);
+        System.out.println("Set price test ($1.00): " + listItems.toString());
+
 
     }
 }
